@@ -91,7 +91,7 @@ public class CreditCardSetup: NSObject {
     func detectCardNumberType(number: String) {
      
         if let type = creditCardValidator.type(from: number) {
-            cardImgView.image = UIImage(named: type.name)
+            cardImgView.image = UIImage(named: type.name) ?? UIImage(named: defaultCardName)
         } else {
             cardImgView.image = UIImage(named: defaultCardName)
         }
