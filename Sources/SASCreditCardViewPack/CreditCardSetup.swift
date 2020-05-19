@@ -19,6 +19,7 @@ public class CreditCardSetup: NSObject {
     public var cardType: UILabel!
     public var cardImgView: UIImageView!
     public var defaultCardName = ""
+    
     public override init() {
         self.creditCardValidator = CreditCardValidator()
     }
@@ -58,10 +59,9 @@ public class CreditCardSetup: NSObject {
         
         self.cardImgView = cardImgView
         
-        
         if let number = tf.text {
            if number.isEmpty {
-            detectCardNumberType(number: number)
+               detectCardNumberType(number: number)
            } else {
                detectCardNumberType(number: number)
            }
